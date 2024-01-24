@@ -50,3 +50,28 @@ text-align: left;
   gap: 20px;
   justify-content: center;
 }
+#name-input{
+  color: #2E2F42;
+  width: 360px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+border-radius: 1;
+ 
+}
+#name-input::placeholder{
+  color: var(--main-fonts);
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 1,5; 
+letter-spacing: 0.64px;
+}
+.greeting{
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 1.33;
+letter-spacing: 0.96px;
+}
