@@ -1,25 +1,32 @@
 const registerForm = document.querySelector('.login-form');
+const email = registerForm.firstElementChild.firstElementChild;
+const password = registerForm.firstElementChild.nextElementSibling.firstElementChild;
 const btnLogin = document.querySelector('button')
-console.log(btnLogin);
-btnLogin.addEventListener('click', onBtnSubmit );
-// function onBtnSubmit (){
-//     console.log('Hello BaBy!')
-// }
-function onBtnSubmit (event){
+
+ registerForm.addEventListener('submit', onFormSubmit );
+
+
+
+function onFormSubmit (event){
 event.preventDefault();
+const userForm = event.target;
+const email = userForm.elements.email.value;
+const password = userForm.elements.password.value;
 
 
-const {email, password} = event.currentTarget.elements;
-if(!email.value.trim() || !password.value.trim()){
-return alert('All form fields must be filled in')
+if(!email.trim() || !password.trim()){
+ alert('All form fields must be filled in')
 }
 else{
-    const accountsObj = {
-        email: email.value,
-        password: password.value,
+    const user = {
+        email: email,
+        password: password,
     };
-    console.log(email.value);
+    console.log(user);
     event.currentTarget.reset();
  }
 
 }
+
+
+
