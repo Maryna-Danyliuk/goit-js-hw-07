@@ -20,7 +20,7 @@ btnDestroy.addEventListener('click', destroyBoxes);
 
 function destroyBoxes(){
   while(boxes.firstChild){
-   boxes.removeChild(boxes.firstChild)
+   boxes.removeChild(boxes.firstChild);
   }
  }
 
@@ -41,7 +41,7 @@ function createBox(amount){
 }
 function createBoxes(){
  createBox()
-input.value = ""
+input.value = "";
 }
 
 
