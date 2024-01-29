@@ -27,9 +27,9 @@ function destroyBoxes(){
 function createBox(amount){
   destroyBoxes();
   amount = input.value;
-  if (amount > 0, amount <= 100){
+  if (amount > 0 && amount <= 100){
   for  (let i = 1; i <= amount; i++) {
-    console.log("Hello" + i);
+
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('box');
     itemDiv.style.width = `${30 + i * 10}px`;
@@ -40,7 +40,7 @@ function createBox(amount){
   };
 }
 function createBoxes(){
- createBox()
+ createBox(amount)
 input.value = "";
 }
 
